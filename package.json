@@ -6,7 +6,9 @@
   "scripts": {
     "start": "npx concurrently -k \"npx tsc -w\" \"npx nodemon dist/index.js\"",
     "build": "npx tsc",
-    "test": "npx jest"
+    "test": "npx jest",
+    "lint": "npx eslint --config .eslintrc.js src/**/*.ts",
+    "format": "npm run lint -- --fix"
   },
   "author": "Joseph Furlott <jmfurlott@gmail.com>",
   "license": "MIT",
