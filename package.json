@@ -1,6 +1,6 @@
 {
   "name": "node-typescript-boilerplate",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A boilerplate project for building and running a node app with typescript",
   "main": "dist/index.js",
   "scripts": {
