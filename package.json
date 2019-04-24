@@ -4,10 +4,11 @@
   "description": "A boilerplate project for building and running a node app with typescript",
   "main": "dist/index.js",
   "scripts": {
-    "start": "npx concurrently -k \"npx tsc -w\" \"npx nodemon dist/index.js\"",
+    "start": "npx concurrently \"npx tsc -w\" \"npx nodemon dist/index.js\" \"npm run lint:watch\"",
     "build": "npx tsc",
     "test": "npx jest",
     "lint": "npx eslint --config .eslintrc.js src/**/*.ts",
+    "lint:watch": "npx esw --watch --color --config .eslintrc.js src/**/*.ts",
     "format": "npm run lint -- --fix"
   },
   "author": "Joseph Furlott <jmfurlott@gmail.com>",
@@ -21,6 +22,7 @@
     "eslint": "^5.16.0",
     "eslint-config-prettier": "^4.1.0",
     "eslint-plugin-prettier": "^3.0.1",
+    "eslint-watch": "^5.0.1",
     "jest": "^24.7.1",
     "nodemon": "^1.18.11",
     "prettier": "^1.17.0",
